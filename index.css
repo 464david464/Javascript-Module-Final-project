@@ -168,11 +168,14 @@ main div{
     width: 60%;
 }
 .ingView{ 
+
     background-repeat: no-repeat;
-    position: relative;
-    top: 20%;
     background-size: 100%;
     animation: imgAni 1s;
+    opacity: 0.3;
+}
+a{
+    color: rgb(41, 41, 41);
 }
 
 @keyframes imgAni {
