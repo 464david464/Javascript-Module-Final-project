@@ -2,6 +2,8 @@
 function init() {
   if (localStorage.getItem("isLog?") == "true") {
     document.querySelector("#login").style.display = "none";
+    document.querySelector(".home-continer").style.display = 'flex';
+    document.body.style.backgroundColor = 'white';
   }
 }
 
@@ -56,6 +58,8 @@ function login() {
   } else {
     document.querySelector("#login").style.display = "none";
     localStorage.setItem("isLog?", "true");
+    document.querySelector(".home-continer").style.display = 'flex';
+    document.body.style.backgroundColor = 'white';
   }
 }
 
@@ -65,3 +69,22 @@ init();
 
 
 // home Phge
+let productsBtn = document.querySelector('#products');
+let imgBgcDIv = document.querySelector('.ingView');
+
+productsBtn.addEventListener('mouseenter', function(){
+    imgBgcDIv.style.backgroundImage = "url('images/product.jpg')"
+});
+productsBtn.addEventListener('mouseleave', function(){
+    imgBgcDIv.removeAttribute('style')
+});
+
+
+let customersBtn = document.querySelector('#customers');
+
+customersBtn.addEventListener('mouseenter', function(){
+    imgBgcDIv.style.backgroundImage = "url('images/customers.png')"
+});
+customersBtn.addEventListener('mouseleave', function(){
+    imgBgcDIv.removeAttribute('style')
+});

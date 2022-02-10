@@ -5,15 +5,13 @@
 body {
   background-color: rgb(35, 104, 207);
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
 /* logIN Page ===========================*/
 #login {
   width: 100%;
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -117,3 +115,67 @@ a {
 }
 /* ==================================================== */
 
+.home-continer{
+    display: none;
+    flex-direction: column;
+}
+header{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wellcome{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+}
+h1{
+    margin: auto;
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+}
+.menu div{
+    cursor: pointer;
+    margin:20px 10px;
+    border: 2px rgba(255, 255, 255, 0) solid;
+    border-width: 0px 0px 3px;
+    transition: border 0.5s ease-in-out;
+}
+.menu div:hover{
+    border: 2px rgb(66, 62, 62) solid;
+    border-width: 0px 0px 3px;
+}
+main{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+main div{
+    margin: 0px 10px;
+    width: 60%;
+}
+.ingView{ 
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20%;
+    background-size: 100%;
+    animation: imgAni 1s;
+}
+
+@keyframes imgAni {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
