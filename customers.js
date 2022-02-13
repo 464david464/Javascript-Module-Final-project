@@ -62,14 +62,18 @@ xhr.addEventListener("readystatechange", function () {
 
 xhr.send(null);
 
-function getFullDetails(numOfCustomer) {
-  const customeDetails = document.createElement("div");
-  customeDetails.classList.add("customeDetails");
+const x = document.querySelector('#x');
+const logOut = document.querySelector('.log-out');
+const user = document.querySelector('.bi-person');
+const logOutBtn = document.querySelector('#btn-log-out');
 
-  return custometDetails;
-}
-
-let detailsBtns = document.querySelector(".fullDetails");
-detailsBtns.addEventListener("click", function () {
-  alert(123);
-});
+user.addEventListener('click', function() {
+  logOut.style.display = 'flex'
+})
+x.addEventListener('click', function() {
+  logOut.style.display = 'none'
+})
+logOutBtn.addEventListener('click', function() {
+  localStorage.removeItem('isLog?');
+  location.reload();
+})

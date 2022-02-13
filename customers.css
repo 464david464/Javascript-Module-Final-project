@@ -81,6 +81,69 @@ svg{
   left: 20px;
   transition: background-color 0.1s ease-in;
 }
-svg:hover{
+.bi-person:hover{
   background-color: rgba(252, 252, 252, 0.233);
+}
+svg:active{
+  background-color: rgba(252, 252, 252, 0.096);
+}
+.log-out{
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 1px 1px 15px 1px rgb(109, 109, 109);
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  -webkit-user-select: none;
+}
+#x{
+  font-size: 26px;
+  font-weight: 500;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#x:hover{
+  color: rgb(165, 165, 165);
+}
+#x:active{
+  color: rgb(3, 3, 3);
+}
+#david{
+  font-size: 24px;
+  color: rgb(73, 73, 73);
+}
+#btn-log-out{
+  border: none;
+  background-color: rgb(224, 224, 224);
+  padding: 1px 3px 1px 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px;
+}
+#btn-log-out:hover{
+  background-color: rgb(180, 180, 180);
+}
+#btn-log-out:active{
+  background-color: rgb(212, 212, 212);
+}
+.bi-arrow-right-short{
+  color: rgb(255, 0, 0);
+  position: relative;
+  left: 1px;
+}
+.bi-person-fill{
+  color: rgb(73, 73, 73);
+  opacity: 0.3;
+  position: absolute;
+  left: 25%;
 }
