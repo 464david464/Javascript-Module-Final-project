@@ -1,6 +1,6 @@
 function init() {
   if(localStorage.getItem("isLog?") !== 'true') {
-    window.location.href = "file:///C:/Users/1/Documents/GitHub/Javascript-Module-Final-project/index.html";
+    window.location.href = "index.html";
   }
 }
 function customersPage(cusEL) {
@@ -47,9 +47,11 @@ if (xhr.readyState !== XMLHttpRequest.DONE) {
 xhr.addEventListener("readystatechange", function () {
   if (xhr.readyState === XMLHttpRequest.DONE) {
     const data = JSON.parse(xhr.responseText);
+    let loadinContiner = document.querySelector('#loadin')
     let loadin = document.querySelector(".loadin");
     let continer = document.querySelector('.continer');
 
+    loadinContiner.style.display = 'none'
     loadin.style.display = 'none';
     continer.style.display = 'block'
     for (let customers of data) {

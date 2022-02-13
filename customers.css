@@ -73,3 +73,14 @@ table{
   justify-content: center;
   align-items: center;
 }
+svg{
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 50%;
+  left: 20px;
+  transition: background-color 0.1s ease-in;
+}
+svg:hover{
+  background-color: rgba(252, 252, 252, 0.233);
+}
