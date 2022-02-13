@@ -49,10 +49,7 @@ body {
   transition: border 0.1s ease-in;
   background: transparent !important;
   border-radius: 0px !important;
-}
-.num:hover {
-  border: 2px white solid;
-  border-width: 0px 0px 2px;
+  cursor: default;
 }
 .num::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -148,12 +145,12 @@ h1{
 .menu div{
     cursor: pointer;
     margin:20px 10px;
-    border: 2px rgba(255, 255, 255, 0) solid;
+    border: 1px rgba(255, 255, 255, 0) solid;
     border-width: 0px 0px 3px;
     transition: border 0.5s ease-in-out;
 }
 .menu div:hover{
-    border: 2px rgb(66, 62, 62) solid;
+    border: 1px rgb(66, 62, 62) solid;
     border-width: 0px 0px 3px;
 }
 main{
@@ -177,7 +174,9 @@ main div{
 a{
     color: rgb(41, 41, 41);
 }
-
+a:hover{
+  color: rgb(41, 41, 41);
+}
 @keyframes imgAni {
     0% {opacity: 0;}
     100% {opacity: 1;}
