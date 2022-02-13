@@ -1,3 +1,8 @@
+function init() {
+  if(localStorage.getItem("isLog?") !== 'true') {
+    window.location.href = "file:///C:/Users/1/Documents/GitHub/Javascript-Module-Final-project/index.html";
+  }
+}
 function customersPage(cusEL) {
   const table = document.createElement("tr");
   table.classList.add("tr");
@@ -26,20 +31,20 @@ function customersPage(cusEL) {
   return table;
 }
 
+init()
 // http request
 let xhr = new XMLHttpRequest();
 
 xhr.open("GET", "https://webschool-js-final-api.herokuapp.com/customers");
+if (xhr.readyState !== XMLHttpRequest.DONE) {
+  let loadin = document.querySelector(".loadin");
+  let continer = document.querySelector('.continer');
 
+  loadin.style.display = 'flex';
+  continer.style.display = 'none'
+  loadin.style.backgroundImage = "url('images/Loader.gif')"
+}
 xhr.addEventListener("readystatechange", function () {
-  if (xhr.readyState !== XMLHttpRequest.DONE) {
-    let loadin = document.querySelector(".loadin");
-    let continer = document.querySelector('.continer');
-
-    loadin.style.display = 'flex';
-    continer.style.display = 'none'
-    loadin.style.backgroundImage = "url('images/Loader.gif')"
-  }
   if (xhr.readyState === XMLHttpRequest.DONE) {
     const data = JSON.parse(xhr.responseText);
     let loadin = document.querySelector(".loadin");

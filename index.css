@@ -164,8 +164,10 @@ main div{
     margin: 0px 10px;
     width: 60%;
 }
-.ingView{ 
-
+.ingView{
+    width: 60%; 
+    position: relative;
+    top: 10vh;
     background-repeat: no-repeat;
     background-size: 100%;
     animation: imgAni 1s;
@@ -179,5 +181,5 @@ a:hover{
 }
 @keyframes imgAni {
     0% {opacity: 0;}
-    100% {opacity: 1;}
+    100% {opacity: 0.3;}
 }
