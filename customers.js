@@ -33,8 +33,7 @@ function customersPage(cusEL) {
   table.addEventListener("click", function () {
     let continerCustomer = document.querySelector("#cusomer");
     continerCustomer.style.display = "flex";
-
-    document.querySelector(".continer").style.display = 'none';
+    document.querySelector(".continer").style.display = "none";
 
     let divCustomer = document.createElement("div");
     divCustomer.classList.add("customerDtetailsWindow");
@@ -46,12 +45,11 @@ function customersPage(cusEL) {
     customerName.classList.add("name");
 
     let imgCustomer = document.createElement("img");
+    let emailCustomer = document.createElement("p");
     let company = document.createElement("p");
     let country = document.createElement("p");
-
     let dateB = document.createElement("p");
     customerName.classList.add("date");
-
     let x = document.createElement("span");
     x.innerText = "X";
 
@@ -59,6 +57,7 @@ function customersPage(cusEL) {
     divCustomer.appendChild(customerId);
     divCustomer.appendChild(customerName);
     divCustomer.appendChild(imgCustomer);
+    divCustomer.appendChild(emailCustomer);
     divCustomer.appendChild(company);
     divCustomer.appendChild(country);
     divCustomer.appendChild(dateB);
@@ -80,17 +79,15 @@ function customersPage(cusEL) {
         imgCustomer.setAttribute("src", "https://picsum.photos/800/500");
         dateB.innerText = "date of birth: " + data.created_at;
         customerId.innerText = "customer id: " + data.id;
-        company.innerText = 'company: ' + data.company;
-        country.innerText = 'country: ' + data.country;
+        company.innerText = "company: " + data.company;
+        country.innerText = "country: " + data.country;
+        emailCustomer.innerText = "email: " + data.email;
 
-       
-
-        
         x.addEventListener("click", function () {
           document.querySelector(".continer").classList.remove("blur");
-          continerCustomer.innerHTML = '';
-          document.querySelector(".continer").style.display = 'block'
-          continerCustomer.style.display = 'none'
+          continerCustomer.innerHTML = "";
+          document.querySelector(".continer").style.display = "block";
+          continerCustomer.style.display = "none";
         });
       }
     });
