@@ -50,6 +50,8 @@ function customersPage(cusEL) {
     let country = document.createElement("p");
     let dateB = document.createElement("p");
     customerName.classList.add("date");
+    let wait = document.createElement("div");
+    wait.setAttribute("id", "wait");
     let x = document.createElement("span");
     x.innerText = "X";
 
@@ -62,6 +64,7 @@ function customersPage(cusEL) {
     divCustomer.appendChild(country);
     divCustomer.appendChild(dateB);
     divCustomer.appendChild(x);
+    divCustomer.appendChild(wait);
 
     let xhr = new XMLHttpRequest();
 
@@ -70,9 +73,26 @@ function customersPage(cusEL) {
       `https://webschool-js-final-api.herokuapp.com/customers/${cusEL.id}`,
       true
     );
-
+    if (xhr.readyState !== XMLHttpRequest.DONE) {
+      wait.style.backgroundImage = "url('images/Wait.gif')";
+      customerId.style.display = "none";
+      customerName.style.display = "none";
+      imgCustomer.style.display = "none";
+      emailCustomer.style.display = "none";
+      company.style.display = "none";
+      country.style.display = "none";
+      dateB.style.display = "none";
+    }
     xhr.addEventListener("readystatechange", function () {
       if (xhr.readyState === XMLHttpRequest.DONE) {
+        wait.style.display = 'none'
+        customerId.style.display = "block";
+        customerName.style.display = "block";
+        imgCustomer.style.display = "block";
+        emailCustomer.style.display = "block";
+        company.style.display = "block";
+        country.style.display = "block";
+        dateB.style.display = "block";
         const data = JSON.parse(xhr.responseText);
 
         customerName.innerText = "name: " + data.first + " " + data.last;
