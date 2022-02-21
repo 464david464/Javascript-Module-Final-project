@@ -55,6 +55,8 @@ function customersPage(cusEL) {
     let x = document.createElement("span");
     x.innerText = "X";
 
+
+    
     continerCustomer.appendChild(divCustomer);
     divCustomer.appendChild(customerId);
     divCustomer.appendChild(customerName);
@@ -63,7 +65,6 @@ function customersPage(cusEL) {
     divCustomer.appendChild(company);
     divCustomer.appendChild(country);
     divCustomer.appendChild(dateB);
-    divCustomer.appendChild(x);
     divCustomer.appendChild(wait);
 
     let xhr = new XMLHttpRequest();
@@ -75,7 +76,7 @@ function customersPage(cusEL) {
     );
     if (xhr.readyState !== XMLHttpRequest.DONE) {
       wait.style.backgroundImage = "url('images/Wait.gif')";
-      customerId.style.display = "none";
+      x.style.display = 'block'
       customerName.style.display = "none";
       imgCustomer.style.display = "none";
       emailCustomer.style.display = "none";
@@ -85,6 +86,7 @@ function customersPage(cusEL) {
     }
     xhr.addEventListener("readystatechange", function () {
       if (xhr.readyState === XMLHttpRequest.DONE) {
+        divCustomer.appendChild(x);
         wait.style.display = 'none'
         customerId.style.display = "block";
         customerName.style.display = "block";
