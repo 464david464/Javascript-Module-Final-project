@@ -125,6 +125,8 @@ svg:active {
   background-color: rgb(224, 224, 224);
   padding: 1px 3px 1px 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   border-radius: 3px;
 }
@@ -189,7 +191,7 @@ svg:active {
   font-size: 24px;
 }
 
-#wait{
+#wait {
   position: relative;
   top: 60px;
   width: 400px;
